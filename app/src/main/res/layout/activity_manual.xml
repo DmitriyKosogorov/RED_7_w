@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".manual">
+
+    <Button
+        android:id="@+id/manual_left"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text=""
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHeight_percent="0.85"
+        app:layout_constraintWidth_percent="0.07"
+        />
+
+    <LinearLayout
+        android:id="@+id/manual_body"
+        android:name="com.example.a7red_0_0.ManualFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#FFFFAA"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/manual_left"
+        app:layout_constraintHeight_percent="0.85"
+        app:layout_constraintWidth_percent="0.86"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/fragment_manual_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Правила"
+            android:textSize="48dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/manual_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/manual_text"
+            android:text=""
+            android:textSize="18dp"
+            android:scrollbars = "vertical"
+            />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/manual_right"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text=""
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/manual_body"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHeight_percent="0.85"
+        app:layout_constraintWidth_percent="0.07"
+        />
+
+    <TextView
+        android:id="@+id/manual_page_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1/1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/manual_body"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/back_button"
+        android:text="Назад"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/manual_page_number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

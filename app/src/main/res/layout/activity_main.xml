@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wood"
+    android:id="@+id/root"
+    tools:context=".MainActivity">
+
+    <!--167 x 503-->
+
+
+    <!--opponent's table-->
+    <TextView
+        android:id="@+id/opps_hand_text"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="Рука оппонента"
+        android:textSize="20dp"
+        android:background="#990000FF"
+        app:layout_constraintTop_toTopOf="@+id/root"
+        app:layout_constraintLeft_toLeftOf="@+id/root"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:id="@+id/opps_hand"
+        android:layout_height="0dp"
+        android:layout_width="1dp"
+        android:text="A"
+        app:layout_constraintTop_toBottomOf="@+id/opps_hand_text"
+        app:layout_constraintLeft_toLeftOf="@+id/root"
+        app:layout_constraintHeight_percent="0.15"
+        />
+
+    <TextView
+        android:id="@+id/opps_palette_text"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="Палитра оппонента"
+        android:textSize="20dp"
+        android:background="#990000FF"
+        app:layout_constraintTop_toBottomOf="@+id/opps_hand"
+        app:layout_constraintLeft_toLeftOf="@+id/root"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:id="@+id/opps_palette"
+        android:layout_height="0dp"
+        android:layout_width="1dp"
+        android:text="A"
+        app:layout_constraintTop_toBottomOf="@+id/opps_palette_text"
+        app:layout_constraintLeft_toLeftOf="@+id/root"
+        app:layout_constraintHeight_percent="0.15"
+        />
+
+    <!--your table-->
+
+    <TextView
+        android:id="@+id/your_hand"
+        android:layout_height="0dp"
+        android:layout_width="1dp"
+        android:text="A"
+        app:layout_constraintBottom_toBottomOf="@+id/root"
+        app:layout_constraintLeft_toLeftOf="@+id/root"
+        app:layout_constraintHeight_percent="0.15"
+        />
+
+    <TextView
+        android:id="@+id/your_hand_text"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="Ваша рука"
+        android:textSize="20dp"
+        android:background="#99FF0000"
+        app:layout_constraintBottom_toTopOf="@+id/your_hand"
+        app:layout_constraintLeft_toLeftOf="@+id/root"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:id="@+id/your_palette_back"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/your_hand_text"
+        app:layout_constraintLeft_toLeftOf="@+id/root"
+        app:layout_constraintHeight_percent="0.15"
+        />
+
+    <TextView
+        android:id="@+id/your_palette"
+        android:layout_height="0dp"
+        android:layout_width="1dp"
+        android:text="A"
+        app:layout_constraintBottom_toTopOf="@+id/your_hand_text"
+        app:layout_constraintLeft_toLeftOf="@+id/root"
+        app:layout_constraintHeight_percent="0.15"
+        />
+
+    <TextView
+    android:id="@+id/your_palette_text"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:text="Ваша Палитра"
+    android:textSize="20dp"
+    android:background="#99FF0000"
+    app:layout_constraintBottom_toTopOf="@+id/your_palette"
+    app:layout_constraintLeft_toLeftOf="@+id/root"
+    android:layout_marginLeft="10dp"
+    />
+
+    <!--other-->
+    <TextView
+        android:id="@+id/rule"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="48dp"
+        android:background="@drawable/red"
+        app:layout_constraintBottom_toTopOf="@+id/your_palette_text"
+        app:layout_constraintTop_toBottomOf="@+id/opps_palette"
+        app:layout_constraintLeft_toLeftOf="@+id/root"
+        app:layout_constraintRight_toRightOf="@+id/root"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintWidth_percent="0.3"
+        />
+
+    <Button
+        android:id="@+id/cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Отменить ход"
+        app:layout_constraintLeft_toLeftOf="@+id/root"
+        app:layout_constraintRight_toLeftOf="@+id/rule"
+        app:layout_constraintBottom_toBottomOf="@+id/rule"
+        />
+
+    <Button
+        android:id="@+id/pass_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Передать ход"
+        app:layout_constraintRight_toRightOf="@+id/root"
+        app:layout_constraintLeft_toRightOf="@+id/rule"
+        app:layout_constraintBottom_toBottomOf="@+id/rule"
+        />
+
+    <TextView
+        android:id="@+id/rule_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:minLines="3"
+        android:singleLine="false"
+        android:text="Правило: Наибольшее из всего"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/pass_button"
+        app:layout_constraintLeft_toRightOf="@+id/rule"
+        app:layout_constraintRight_toRightOf="@+id/root"
+        app:layout_constraintTop_toTopOf="@+id/rule"
+        app:layout_constraintHeight_percent="0.15"
+        app:layout_constraintWidth_percent="0.35"/>
+
+    <TextView
+        android:id="@+id/win_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:minLines="3"
+        android:singleLine="false"
+        android:text="Log"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/cancel_button"
+        app:layout_constraintRight_toLeftOf="@+id/rule"
+        app:layout_constraintLeft_toLeftOf="@+id/root"
+        app:layout_constraintTop_toTopOf="@+id/rule"
+        app:layout_constraintHeight_percent="0.15"
+        app:layout_constraintWidth_percent="0.35"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="помощь"
+        android:id="@+id/help_button"
+        app:layout_constraintTop_toBottomOf="@+id/rule"
+        app:layout_constraintRight_toRightOf="@+id/root"
+        app:layout_constraintLeft_toLeftOf="@+id/root"
+        app:layout_constraintBottom_toTopOf="@+id/your_palette_text"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

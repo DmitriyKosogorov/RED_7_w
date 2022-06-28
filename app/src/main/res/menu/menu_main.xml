@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context=".MainActivity">
+    <item
+        android:id="@+id/restart"
+        android:orderInCategory="100"
+        android:title="Начать заново"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/manual"
+        android:orderInCategory="100"
+        android:title="Правила"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/change_style"
+        android:orderInCategory="100"
+        android:title="Сменить стиль"
+        app:showAsAction="never"/>
+</menu>
